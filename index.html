@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.5.0.js"
   integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
@@ -9,21 +10,54 @@
 		<title>sudoku solve</title>
 </head>
 <body>
-	<h1>Sudoku solver</h1>
+	
 <script type="text/javascript" src="app.js"></script>
 <style type="text/css">
 		input{
+			text-align: center;
 			width: 40px;
+			border: 2px solid #240745;
+             border-radius: 5px;      
+			 border-bottom-style: solid blue;
 		}
 		#block{
-			width: 400px;
+			margin-left: 30%;
+			width: 407px;
+			background-image: linear-gradient(to bottom right, #21B6C5, #310B5C);
+			padding: 10px;
+			 box-shadow: 5px 10px 18px black;
+			 border-radius: 23px;
+			 font-family: 'Montserrat', sans-serif;
 		}
+		h1{
+			font-family: 'Montserrat', sans-serif;
+			color: white;
+			text-align: center;
+		}
+         #btn{
+         	font-family: 'Montserrat', sans-serif;
+         	height: 50px;
+         	margin-top: 20px;
+         	margin-left: 35%;
+         	width: 100px;
+         	font-size: 30px;
+         	border-radius: 23px;
+         }
+         #btn:hover{
+         	color: white;
+         	background-color: #240745;
+         }
+         body{
+         	background: radial-gradient(#2FE57F, #9198e5);
+         }
 	</style>
-<div id="block">
+<div id="block"><h1>Sudoku solver</h1>
 <div id="grid" >
 
-<button onclick="solve()">solve</button>
+
 </div>
+<button onclick="solve()" id="btn">solve</button>
 </div>
+
 </body>
 </html>
