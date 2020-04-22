@@ -3,7 +3,18 @@ var myarray=new Array(9);
 for (i=0; i <9; i++)
     myarray[i]=new Array(9);
 
+//to reset input 
+const reset = ()=>{
+	for(var i=0;i<9;i++ ){
+		for(var j=0;j<9;j++){
+           $(`#${i}-${j}`).val('');
+           $(`#${i}-${j}`).css('background-color','white');
+		}
+	}
+};
+
 class point {
+	//find unfilled point 
 	findPoint(mat){
 		let flag=0;let count=0;
          for(let i=0;i<9;i++){
@@ -65,6 +76,7 @@ const isFillable = (mat,row,col,num)=>{
 };
 const solveSudokuUtil = (mat,i,j)=>{
    if(i===-1 && j===-1)return 1;
+   else return 0;
    for(let num=0;num<=9;num++){
    	 if(isFillable(mat,i,j,num)===true){
    	 	mat[i][j]=num;
@@ -92,6 +104,7 @@ const solve = ()=>{
   console.log(p.i+"and"+p.j);
   if(solveSudokuUtil(mat,p.i,p.j)===0){
   	alert('no solution possible');
+  	reset();
   }else printSolution(mat);
  };
 /*
