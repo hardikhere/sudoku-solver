@@ -76,7 +76,6 @@ const isFillable = (mat,row,col,num)=>{
 };
 const solveSudokuUtil = (mat,i,j)=>{
    if(i===-1 && j===-1)return 1;
-   else return 0;
    for(let num=0;num<=9;num++){
    	 if(isFillable(mat,i,j,num)===true){
    	 	mat[i][j]=num;
